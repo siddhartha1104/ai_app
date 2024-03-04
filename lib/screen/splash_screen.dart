@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     // wait for sometime on splashScreen and then move to next screen
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (_) => const OnboardingScreen()));
     });
