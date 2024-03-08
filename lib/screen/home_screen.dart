@@ -1,4 +1,5 @@
 import 'package:ai_app/helper/pref.dart';
+import 'package:ai_app/model/home_type.dart';
 import 'package:ai_app/widgets/home_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -52,7 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         padding: EdgeInsets.symmetric(
             horizontal: mq.width * .03, vertical: mq.height * .01),
-        children: const [HomeCard()],
+        children: HomeType.values
+            .map((e) => HomeCard(
+                  homeType: e,
+                ))
+            .toList(),
       ),
     );
   }
