@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 enum HomeType { aiChatBot, aiImage, aiTranslator }
 
 extension MyHomeType on HomeType {
